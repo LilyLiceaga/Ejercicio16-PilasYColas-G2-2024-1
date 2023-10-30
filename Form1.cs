@@ -15,8 +15,8 @@ namespace Ejercicio16_PilasYColas_G2_2024_1
         {
             Queue<String> FraseInicial = new Queue<String>();
 
-            txtbPalindromos = char.Parse(txtbPalindromos.ToString());
-
+            txtbPalindromos = char.Parse(txtbPalindromos.ToString().ToLower());
+            
             int total = FraseInicial.Count; 
             for (int i = 0; i < total; i++)
             {

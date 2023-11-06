@@ -11,26 +11,37 @@ namespace Ejercicio16_PilasYColas_G2_2024_1
             InitializeComponent();
         }
         
-        static void Cola(object txtbPalindromos)
+        private void btnAceptar_Click(object sender, EventArgs e )
         {
-            Queue<String> FraseInicial = new Queue<String>();
+            string palindromo = txtbPalindromos.Text.ToLower().Replace(" ", ""); ;
 
-            txtbPalindromos = char.Parse(txtbPalindromos.ToString().ToLower());
-            
-            int total = FraseInicial.Count; 
+            Queue<char> FraseInicial = new Queue<char>();
+            Stack<char> FraseReversa = new Stack<char>();
+
+            int frase = 0;
+            int total = palindromo.Length; 
+            char[] array = palindromo.ToCharArray();
+
+
             for (int i = 0; i < total; i++)
             {
-
+                FraseInicial.Enqueue(palindromo[i]);
+                FraseReversa.Push(palindromo[i]);
+            } 
+            
+            for (int i = 0; i < total; i++)
+            {
+                if (FraseInicial.Dequeue() == FraseReversa.Pop())
+                {
+                    frase += 1;
+                }
+                else
+                {
+                    frase = 0;
+                }
             }
-        }
-        static void Pila()
-        {
-            Stack<String> FraseReversa = new Stack<String>();
 
-        }
-        private void btnAceptar_Click(object sender, EventArgs e)
-        {
-            if ()
+            if (frase == total)
             {
                 lbFrase.Text = "Es un Palindromo!";
             }
@@ -39,12 +50,5 @@ namespace Ejercicio16_PilasYColas_G2_2024_1
                 lbFrase.Text = "No es un Palindromo!";
             }
         }
-
-        private void txtbPalindromos_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        
     }
 }

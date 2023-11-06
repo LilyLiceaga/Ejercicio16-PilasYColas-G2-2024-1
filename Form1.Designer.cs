@@ -60,7 +60,7 @@
             // txtbPalindromos
             // 
             this.txtbPalindromos.Location = new System.Drawing.Point(107, 129);
-            this.txtbPalindromos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtbPalindromos.Margin = new System.Windows.Forms.Padding(4);
             this.txtbPalindromos.Name = "txtbPalindromos";
             this.txtbPalindromos.Size = new System.Drawing.Size(349, 22);
             this.txtbPalindromos.TabIndex = 2;
@@ -69,7 +69,7 @@
             // 
             this.btnAceptar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAceptar.Location = new System.Drawing.Point(203, 197);
-            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(4);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(157, 53);
             this.btnAceptar.TabIndex = 3;
@@ -98,9 +98,9 @@
             this.Controls.Add(this.txtbPalindromos);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "¿Es Palíndromo?";
             this.ResumeLayout(false);
             this.PerformLayout();
 
